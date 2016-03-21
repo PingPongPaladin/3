@@ -1,0 +1,21 @@
+circle
+200 230 300
+circle
+155 300 100
+circle
+325 300 80
+circle
+175 300 70
+circle
+175 300 10
+circle
+175 300 30
+circle
+300 328 20
+hermite
+150 150 150 50 350 150 350 300
+bezier
+200 250 150 50 300 250 300 280
+display
+save
+quit
