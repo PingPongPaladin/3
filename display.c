@@ -32,8 +32,10 @@ jdyrlandweaver
 ====================*/
 void plot( screen s, color c, int x, int y) {
   int newy = YRES - 1 - y;
-  if ( x >= 0 && x < XRES && newy >=0 && newy < YRES )
+
+  if ( x >= 0 && x < XRES && newy >=0 && newy < YRES ) {
     s[x][newy] = c;
+  }
 }
 
 /*======== void clear_screen() ==========
@@ -137,23 +139,6 @@ void display( screen s) {
     wait(&x);
     remove( fname );
   }
-  /* For some reason, this refuses to run correctly
-     on some systems. Most likely a strange imagemagick
-     install issue. 
-     Above is a workaroudn for now.
-  int x, y;
-  FILE *f;
 
-  f = popen("display", "w");
-
-  fprintf(f, "P3\n%d %d\n%d\n", XRES, YRES, MAX_COLOR);
-  for ( y=0; y < YRES; y++ ) {
-    for ( x=0; x < XRES; x++) 
-      
-      fprintf(f, "%d %d %d ", s[x][y].red, s[x][y].green, s[x][y].blue);
-    fprintf(f, "\n");
-  }
-  pclose(f);
-  */
 }
 
